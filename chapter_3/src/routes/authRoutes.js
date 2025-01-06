@@ -41,6 +41,31 @@ router.post('/login', (req, res)=>{
   // but we get it back and see it's encrypted which means you can not compare it to the one the user just used trying to login 
   // so what we can do is again, one way encrypt the password the user just entered
 
+   const { username, password } = req.body;
+
+   try{
+      const getUser = db.prepare('SELECT * FROM users WHERE username = ?');
+      const user =  getUser.get(username);
+    
+      //If we cannot find a user that does not match return out of the function
+      if(!user) {return res.status(404).send({message: "user not found"})};
+
+      const passwordIsValid = bcrypt.compareSync(password, user.password);
+
+      // If the password doesn't match, return out of the function
+      if(!passwordIsValid) {return res.status(401).send({ message: "Invalid password"})};
+
+      // then we have a successful authentication
+     
+      const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET,{expiresIn: '24h'});
+        res.json({ token });
+      console.log(user);
+   }catch(err) {
+    console.log(err.message);
+    res.sendStatus(503);
+   }
+
+
 });
 
 export default router;
