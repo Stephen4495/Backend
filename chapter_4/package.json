@@ -1,5 +1,5 @@
 {
-  "name": "chapter_3",
+  "name": "chapter_4",
   "version": "1.0.0",
   "main": "server.js",
   "type": "module",
@@ -11,10 +11,13 @@
   "keywords": [],
   "author": "Stephen Muritu",
   "license": "ISC",
-  "description": "A fullstack todo application that uses a NodeJS backend, a SQLite database and JWT authentication. ",
+  "description": "A dockerized fullstack todo application that uses a NodeJS backend, a postgreSQL database, a Prisma ORM and JWT authentication. ",
   "dependencies": {
+    "@prisma/client": "^6.2.1",
     "bcryptjs": "^2.4.3",
     "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1",
+    "prisma": "^6.2.1"
   }
 }
