@@ -5,7 +5,9 @@ const router = express.Router();
 
 // Get all todos for loogged-in user
 router.get('/', (req, res)=>{
-
+  const getTodos = db.prepare('SELECT * FROM todos WHERE user_id = ?');
+  const todos = getTodos.all(req.userId);
+  req.json(todos);
 });
 // Create a new todo
 router.post('/', (req, res)=>{
