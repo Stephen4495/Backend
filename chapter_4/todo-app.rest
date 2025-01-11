@@ -21,10 +21,10 @@ Content-Type: application/json
 
 ### Fetch all todos Get /TODOS (protected)
 GET http://localhost:5000/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM2NDU3NzMzLCJleHAiOjE3MzY1NDQxMzN9.k-M-F4LqOfOcuP8_OuJR8UeXU1-JRibved-FbLUQcEk
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM2NTU5MTg0LCJleHAiOjE3MzY2NDU1ODR9.LFwlq_n8KxbLUz1fJeUlLK6g837OeIP1uzMS17fWqUw
 ### Creates a new todo POST /TODOS (protected)
 POST http://localhost:5000/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM2NDU3NzMzLCJleHAiOjE3MzY1NDQxMzN9.k-M-F4LqOfOcuP8_OuJR8UeXU1-JRibved-FbLUQcEk
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM2NTU5MTg0LCJleHAiOjE3MzY2NDU1ODR9.LFwlq_n8KxbLUz1fJeUlLK6g837OeIP1uzMS17fWqUw
 Content-Type: application/json
 
 {
